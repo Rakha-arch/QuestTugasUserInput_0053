@@ -283,7 +283,35 @@ fun FieldTanggalLahir(
         modifier = modifier
     )
 
-
+    if (tampilDialog) {
+        val datePickerState = rememberDatePickerState()
+        DatePickerDialog(
+            onDismissRequest = { tampilDialog = false },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        datePickerState.selectedDateMillis?.let { milis ->
+                            onTanggalChange(
+                                SimpleDateFormat(polaTanggal, Locale.getDefault())
+                                    .format(Date(milis))
+                            )
+                        }
+                        tampilDialog = false
+                    }
+                ) {
+                    Text(text = stringResource(id = R.string.tombol_ok))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { tampilDialog = false }) {
+                    Text(text = stringResource(id = R.string.tombol_batal))
+                }
+            }
+        ) {
+            DatePicker(state = datePickerState)
+        }
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
