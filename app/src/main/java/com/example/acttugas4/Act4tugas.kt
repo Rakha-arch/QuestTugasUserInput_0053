@@ -374,7 +374,11 @@ fun PilihanSkill(
             fontWeight = FontWeight.Bold
         )
 
-         {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             daftarSkill.forEach { skill ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
 
