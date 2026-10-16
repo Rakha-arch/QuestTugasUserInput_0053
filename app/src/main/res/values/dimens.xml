@@ -18,4 +18,5 @@
     <dimen name="tinggi_gambar">300dp</dimen>
     <dimen name="tumpang_tindih_kartu">32dp</dimen>
 
+    <integer name="jumlah_indikator">4</integer>
 </resources>
