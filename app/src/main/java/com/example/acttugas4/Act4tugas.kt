@@ -320,7 +320,8 @@ fun DropdownExperience(
     onTerpilihChange: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
-
+    var terbuka by remember { mutableStateOf(false) }
+    val daftarExperience = stringArrayResource(id = R.array.daftar_experience)
 
     ExposedDropdownMenuBox(
 
