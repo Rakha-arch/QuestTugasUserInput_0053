@@ -364,7 +364,9 @@ fun PilihanSkill(
 ) {
     val daftarSkill = stringArrayResource(id = R.array.daftar_skill)
 
-
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_field))
     ) {
 
 
