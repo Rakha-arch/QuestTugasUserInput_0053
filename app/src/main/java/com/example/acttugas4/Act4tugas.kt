@@ -385,7 +385,10 @@ fun PilihanSkill(
                         checked = skill in skillTerpilih,
                         onCheckedChange = { dipilih -> onSkillChange(skill, dipilih) }
                     )
-
+                    Text(
+                        text = skill,
+                        fontSize = dimensionResource(id = R.dimen.ukuran_teks_skill).value.sp
+                    )
                 }
             }
         }
