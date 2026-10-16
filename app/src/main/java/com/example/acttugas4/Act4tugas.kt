@@ -265,7 +265,23 @@ fun FieldTanggalLahir(
     var tampilDialog by remember { mutableStateOf(false) }
     val polaTanggal = stringResource(id = R.string.format_tanggal)
 
-
+    OutlinedTextField(
+        value = tanggal,
+        onValueChange = {},
+        readOnly = true,
+        singleLine = true,
+        shape = bentukField(),
+        label = { Text(text = stringResource(id = R.string.label_tgl_lahir)) },
+        trailingIcon = {
+            IconButton(onClick = { tampilDialog = true }) {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_kalender),
+                    contentDescription = stringResource(id = R.string.deskripsi_ikon_kalender)
+                )
+            }
+        },
+        modifier = modifier
+    )
 
 
 
