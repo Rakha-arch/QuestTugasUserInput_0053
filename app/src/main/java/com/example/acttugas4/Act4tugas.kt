@@ -324,7 +324,9 @@ fun DropdownExperience(
     val daftarExperience = stringArrayResource(id = R.array.daftar_experience)
 
     ExposedDropdownMenuBox(
-
+        expanded = terbuka,
+        onExpandedChange = { terbuka = !terbuka },
+        modifier = modifier
     ) {
 
         ExposedDropdownMenu(
