@@ -414,6 +414,10 @@ fun TombolProceed(
             .fillMaxWidth()
             .height(dimensionResource(id = R.dimen.tinggi_tombol))
     ) {
-
+        Text(
+            text = stringResource(id = R.string.tombol_proceed),
+            fontSize = dimensionResource(id = R.dimen.ukuran_teks_tombol).value.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
