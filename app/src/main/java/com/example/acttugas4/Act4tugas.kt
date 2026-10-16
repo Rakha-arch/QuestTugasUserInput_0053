@@ -381,7 +381,10 @@ fun PilihanSkill(
         ) {
             daftarSkill.forEach { skill ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
-
+                    Checkbox(
+                        checked = skill in skillTerpilih,
+                        onCheckedChange = { dipilih -> onSkillChange(skill, dipilih) }
+                    )
 
                 }
             }
