@@ -374,13 +374,17 @@ fun PilihanSkill(
             fontWeight = FontWeight.Bold
         )
 
-        Row(
+        // Gunakan Column ke bawah, bukan Row menyamping
+        Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_field))
         ) {
             daftarSkill.forEach { skill ->
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.jarak_field))
+                ) {
                     Checkbox(
                         checked = skill in skillTerpilih,
                         onCheckedChange = { dipilih -> onSkillChange(skill, dipilih) }
